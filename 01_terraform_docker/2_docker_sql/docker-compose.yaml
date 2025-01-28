@@ -19,3 +19,26 @@ services:
     ports:
       - "8080:80"
 
+#Ingestion Service
+  taxi_ingest:
+    build: .
+    image: taxi_ingest:v001
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=ny_taxi
+      - POSTGRES_HOST=pg_database
+      - URL=https://d37ci6vzurychx.cloudfront.net/trip-data/green_tripdata_2019-10.parquet
+    command: >
+      sh -c "python /app/ingest_data_pq.py
+      --user root
+      --password root
+      --host pg_database
+      --port 5432 
+      --db ny_taxi 
+      --table_name green_taxidata_Oct2019
+      --url $URL"
+    volumes:
+      - "./ny_taxi_cleaned_data:/ny_taxi_cleaned_data:rw"
+    depends_on:
+      - pg_database
