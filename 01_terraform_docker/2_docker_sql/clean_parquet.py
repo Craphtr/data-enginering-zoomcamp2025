@@ -6,7 +6,7 @@ def clean_parquet(raw_data_parquet,
                   remove_nulls=True,
                   remove_invalids=True,
                   null_parts = 10,
-                  path_to_cleaned_parquet = "/ny_taxi_postgres_data/cleaned_green_taxi_data.parquet"
+                  path_to_cleaned_parquet = "/ny_taxi_cleaned_data/cleaned_green_taxi_data.parquet"
 ):
     """This function cleans a raw data parquet file of invalid and null data and returns a cleaned dataframe
     Usage: clean_parquet(raw_data, neg_fare_to_positive=True, remove_negative_values=True)
