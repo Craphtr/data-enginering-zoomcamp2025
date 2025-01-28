@@ -1,0 +1,10 @@
+01_terraform_docker/2_docker_sql/ny_taxi_postgres_data/
+01_terraform_docker/2_docker_sql/compose_cmd
+01_terraform_docker/2_docker_sql/*_csv.py
+01_terraform_docker/2_docker_sql/_pycache_
+01_terraform_docker/2_docker_sql/clean_csv.ipynb
+01_terraform_docker/2_docker_sql/ingest_data_csv.ipynb
+*.ipynb_checkpoints
+01_terraform_docker/2_docker_sql/*Ex_csv*
+.DS_Store
+*.pyc
