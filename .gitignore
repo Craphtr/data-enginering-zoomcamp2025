@@ -8,6 +8,7 @@
 01_terraform_docker/2_docker_sql/*Ex_csv*
 .DS_Store
 *.pyc
+.gitignore
 
 # Exclude Local .terraform directories
 01_terraform_docker/Terraform/keys/**/.terraform/*
