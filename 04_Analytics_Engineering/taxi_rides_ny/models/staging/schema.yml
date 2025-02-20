@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: staging
+    database: dataengr_zoomcamp_892
+    schema: dataengr_zoomcamp_892
+
+    tables:
+      - name: green_tripdata
+
+      - name: yellow_tripdata
